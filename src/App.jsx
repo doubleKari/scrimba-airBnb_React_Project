@@ -1,17 +1,10 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
-
 import Heroimage from "./assets/images/photo-grid.png";
-
-const info = [
-  {
-    caption: "Life lessons with Katie Zoferes",
-    rating: "5.0",
-    number: 6,
-    fee: "$136",
-  },
-];
+import Katie from "./assets/images/Katie.png";
+import wedding from "./assets/images/wedding.png";
+import bike from "./assets/images/bike.png";
 
 function HeroSection() {
   return (
@@ -35,13 +28,30 @@ function App() {
     <div className="w-full h-full font-poppins">
       <Navbar />
       <HeroSection />
-      <section className="p-3 flex flex-col justify-center items-center mt-4">
+      <section className="flex flex-col items-center gap-5">
         <Card
-          img={require("./assets/images/katie-zaferes.png")}
-          rating={info[0].rating}
-          number={info[0].number}
-          fee={info[0].fee}
-          caption={info[0].caption}
+          img={Katie}
+          rating="5.0"
+          reviewCount={6}
+          country="USA"
+          title="Life Lessons with Katie"
+          price={136}
+        />
+         <Card
+          img={wedding}
+          rating="5.0"
+          reviewCount={30}
+          country="USA"
+          title="Learn wedding photography"
+          price={125}
+        />
+         <Card
+          img={bike}
+          rating="4.8"
+          reviewCount={2}
+          country="USA"
+          title="Group Mountain Bike Ride"
+          price={50}
         />
       </section>
     </div>

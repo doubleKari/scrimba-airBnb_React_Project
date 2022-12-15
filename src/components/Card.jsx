@@ -1,29 +1,36 @@
 import React from "react";
+import star from "../assets/images/star.png";
 
-export default function Card({ img, rating, caption, fee, number }) {
+export default function Card({
+  img,
+  rating,
+  reviewCount,
+  country,
+  title,
+  price,
+}) {
   return (
-    <div className="space-y-1">
-      <div className="">
+    <section className="space-y-3 p-8">
+      <div>
         <img
           src={img}
-          alt="Woman in swimsuit"
-          className="rounded-lg w-full h-full object-cover object-center "
+          alt=""
+          className="w-full h-full object-cover object-center"
         />
       </div>
-      <div className="flex items-center space-x-1">
-        <img
-          src={require("../assets/images/star.png")}
-          alt="star"
-          className="w-4 h-4"
-        />
-        <span> {rating}</span>
-        <span className="text-[#918E9B]"> ({number})</span>
-        <span className="text-[#918E9B]">&bull; USA</span>
+
+      <div className="space-y-1">
+        <div className="text-sm flex gap-1">
+          <img src={star} alt="star" className="w-4 h-4 rounded-lg" />
+          <span>{rating}</span>
+          <span className="text-[#918E9B]">({reviewCount}) • </span>
+          <span className="text-[#918E9B]">{country}</span>
+        </div>
+        <p className="text-sm">{title}</p>
+        <p className="text-sm">
+          <span className="font-bold">From ${price}</span> / person
+        </p>
       </div>
-      <p>{caption}</p>
-      <p>
-        <span className="font-bold">From {fee}</span> / person
-      </p>
-    </div>
+    </section>
   );
 }
