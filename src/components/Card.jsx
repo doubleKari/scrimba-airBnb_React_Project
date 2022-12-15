@@ -8,9 +8,10 @@ export default function Card({
   country,
   title,
   price,
+  id,
 }) {
   return (
-    <section className="space-y-3 px-8 pb-3">
+    <section className="space-y-3 px-8 pb-3 lg:max-w-sm">
       <div>
         <img
           src={img}
@@ -26,8 +27,8 @@ export default function Card({
           <span className="text-[#918E9B]">({reviewCount}) • </span>
           <span className="text-[#918E9B]">{country}</span>
         </div>
-        <p className="text-sm">{title}</p>
-        <p className="text-sm">
+        <p className="text-sm lg:text-lg">{title}</p>
+        <p className="text-sm lg:text-lg">
           <span className="font-bold">From ${price}</span> / person
         </p>
       </div>
