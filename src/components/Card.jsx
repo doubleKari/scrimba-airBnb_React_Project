@@ -10,7 +10,7 @@ export default function Card({
   price,
 }) {
   return (
-    <section className="space-y-3 p-8">
+    <section className="space-y-3 px-8 pb-3">
       <div>
         <img
           src={img}

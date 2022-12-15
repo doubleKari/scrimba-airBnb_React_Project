@@ -28,7 +28,7 @@ function App() {
     <div className="w-full h-full font-poppins">
       <Navbar />
       <HeroSection />
-      <section className="flex flex-col items-center gap-5">
+      <section className="flex flex-col items-center gap-5 mb-6">
         <Card
           img={Katie}
           rating="5.0"
@@ -37,7 +37,7 @@ function App() {
           title="Life Lessons with Katie"
           price={136}
         />
-         <Card
+        <Card
           img={wedding}
           rating="5.0"
           reviewCount={30}
@@ -45,7 +45,7 @@ function App() {
           title="Learn wedding photography"
           price={125}
         />
-         <Card
+        <Card
           img={bike}
           rating="4.8"
           reviewCount={2}
