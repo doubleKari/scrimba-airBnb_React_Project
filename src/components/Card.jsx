@@ -11,11 +11,14 @@ export default function Card({
 }) {
   return (
     <section className="space-y-3 pb-3 lg:max-w-sm">
-      <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl">
+      <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl relative">
+        <div className="uppercase absolute z-30 bg-white rounded px-2 top-3 left-2">
+          sold out
+        </div>
         <img
           src={img}
           alt=""
-          className="w-full h-full object-cover object-center rounded-2xl"
+          className="w-full h-full object-cover object-center rounded-2xl z-10"
         />
       </div>
 
