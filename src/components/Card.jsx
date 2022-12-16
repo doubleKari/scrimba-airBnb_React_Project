@@ -5,16 +5,26 @@ export default function Card({
   img,
   rating,
   reviewCount,
-  country,
+  location,
   title,
   price,
+  openSpots,
 }) {
+  let badgeText = "";
+  if (openSpots === 0) {
+    badgeText = "sold out";
+  } else if (location === "Online") {
+    badgeText = "online";
+  }
+
   return (
     <section className="space-y-3 pb-3 lg:max-w-sm">
       <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl relative">
-        <div className="uppercase absolute z-30 bg-white rounded px-2 top-3 left-2">
-          sold out
-        </div>
+        {badgeText && (
+          <div className="uppercase absolute z-30 bg-white rounded px-2 top-3 left-2">
+            {badgeText}
+          </div>
+        )}
         <img
           src={img}
           alt=""
@@ -27,7 +37,7 @@ export default function Card({
           <img src={star} alt="star" className="w-4 h-4 rounded-lg" />
           <span>{rating}</span>
           <span className="text-[#918E9B]">({reviewCount}) • </span>
-          <span className="text-[#918E9B]">{country}</span>
+          <span className="text-[#918E9B]">{location}</span>
         </div>
         <p className="text-sm lg:text-lg">{title}</p>
         <p className="text-sm lg:text-lg">

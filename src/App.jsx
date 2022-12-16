@@ -11,10 +11,11 @@ const cardInfo = data.map((card) => {
       img={card.coverImg}
       rating={card.stats.rating}
       reviewCount={card.stats.reviewCount}
-      country={card.location}
+      location={card.location}
       title={card.title}
       price={card.price}
       key={card.id}
+      openSpots={card.openSpots}
     />
   );
 });
