@@ -2,14 +2,12 @@ import React from "react";
 import star from "../assets/images/star.png";
 
 export default function Card({
-  items: {
-    coverImg,
-    openSpots,
-    location,
-    title,
-    price,
-    stats: { rating, reviewCount },
-  },
+  coverImg,
+  openSpots,
+  location,
+  title,
+  price,
+  stats:{rating, reviewCount}
 }) {
   let badgeText = "";
   if (openSpots === 0) {

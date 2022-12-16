@@ -7,7 +7,7 @@ import { data } from "./data";
 
 const cardInfo = data.map((card) => {
   console.log(card);
-  return <Card items={card} key={card.id} />;
+  return <Card {...card} key={card.id} />;
 });
 
 function HeroSection() {
