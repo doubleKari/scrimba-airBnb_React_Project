@@ -10,7 +10,7 @@ export default function Card({
   price,
 }) {
   return (
-    <section className="space-y-3  pb-3 lg:max-w-sm">
+    <section className="space-y-3 pb-3 lg:max-w-sm">
       <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl">
         <img
           src={img}

@@ -22,7 +22,7 @@ const cardInfo = data.map((card) => {
 function HeroSection() {
   return (
     <div className="lg:p-6 lg:px-10 lg:pt-10">
-      <div className="p-2 mb-5 md:max-w-[1080px] lg:px-20 mx-auto lg:mb-10">
+      <div className="mb-5 md:max-w-[1080px] lg:px-20 mx-auto lg:mb-10">
         <img
           src={Heroimage}
           alt="Hero"
@@ -46,7 +46,7 @@ function App() {
       <Navbar />
       <HeroSection />
 
-      <section className="mx-auto sm:p-5  flex flex-col items-center xl:justify-center  gap-5 sm:gap-7 mb-6 sm:flex-row sm:overflow-scroll">
+      <section className="mx-auto sm:p-5  flex flex-col items-center xl:justify-center  gap-5  mb-6 sm:flex-row sm:overflow-scroll">
         {cardInfo}
       </section>
     </div>
