@@ -2,13 +2,14 @@ import React from "react";
 import star from "../assets/images/star.png";
 
 export default function Card({
-  img,
-  rating,
-  reviewCount,
-  location,
-  title,
-  price,
-  openSpots,
+  items: {
+    coverImg,
+    openSpots,
+    location,
+    title,
+    price,
+    stats: { rating, reviewCount },
+  },
 }) {
   let badgeText = "";
   if (openSpots === 0) {
@@ -21,12 +22,12 @@ export default function Card({
     <section className="space-y-3 pb-3 lg:max-w-sm">
       <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl relative">
         {badgeText && (
-          <div className="uppercase absolute z-30 bg-white rounded px-2 top-3 left-2">
+          <div className="uppercase absolute z-30 bg-white rounded px-2 top-3 left-2 font-bold">
             {badgeText}
           </div>
         )}
         <img
-          src={img}
+          src={coverImg}
           alt=""
           className="w-full h-full object-cover object-center rounded-2xl z-10"
         />
