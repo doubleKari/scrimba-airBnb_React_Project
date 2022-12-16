@@ -46,7 +46,7 @@ function App() {
       <Navbar />
       <HeroSection />
 
-      <section className="flex flex-col items-center xl:justify-center  gap-5 mb-6 sm:flex-row sm:overflow-scroll">
+      <section className="mx-auto sm:p-5  flex flex-col items-center xl:justify-center  gap-5 sm:gap-7 mb-6 sm:flex-row sm:overflow-scroll">
         {cardInfo}
       </section>
     </div>
