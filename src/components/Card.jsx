@@ -8,15 +8,14 @@ export default function Card({
   country,
   title,
   price,
-  id,
 }) {
   return (
     <section className="space-y-3 px-8 pb-3 lg:max-w-sm">
-      <div>
+      <div className="w-80 h-80 sm:w-80 sm:h-auto rounded-2xl">
         <img
           src={img}
           alt=""
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center rounded-2xl"
         />
       </div>
 

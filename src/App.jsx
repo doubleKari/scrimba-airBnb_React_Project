@@ -45,7 +45,8 @@ function App() {
     <div className="w-full h-full font-poppins">
       <Navbar />
       <HeroSection />
-      <section className="flex flex-col items-center gap-5 mb-6 lg:flex-row lg:justify-center">
+
+      <section className="flex flex-col items-center xl:justify-center  gap-5 mb-6 sm:flex-row sm:overflow-scroll">
         {cardInfo}
       </section>
     </div>

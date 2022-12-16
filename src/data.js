@@ -38,5 +38,5 @@ export const data = [
         },
         location: "Norway",
         openSpots: 3,
-    }
+    },
 ]
